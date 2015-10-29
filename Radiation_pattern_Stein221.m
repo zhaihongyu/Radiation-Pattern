@@ -1,6 +1,8 @@
 clc;
 clear all;
 close all;
+
+%% Set the basic parameters
 theta=0:pi/45:pi;
 theta_num=size(theta,2);
 phi=0:pi/45:2*pi;
@@ -32,7 +34,11 @@ M(:,:,2)=M_LD;
 M(:,:,3)=M_CLVD;
 M(:,:,4)=M_DC;
 delta=[1 0 0;0 1 0;0 0 1];
-% Calculate the radiation pattern and plot it
+% Set the figure property
+F1=figure;
+Figure_Size=get(0,'ScreenSize');
+set(F1,'Position',Figure_Size);
+%% Calculate the radiation pattern and plot it
 for M_Num=1:4
     for j=1:theta_num
         for i=1:phi_num
@@ -103,8 +109,11 @@ for M_Num=1:4
 %     plot3(RP_Sx,RP_Sy,RP_Sz,'b.');
     surf(RP_Sx(:,1:23),RP_Sy(:,1:23),RP_Sz(:,1:23),'facecolor',Facecolor,'edgecolor',Edgecolor);
     surf(RP_Sx(:,23:46),RP_Sy(:,23:46),RP_Sz(:,23:46),'facecolor',Facecolor,'edgecolor',Edgecolor);
-    axis([-1 1 -1 1 -1 1]);
+
     view(3)
+    
+    axis equal
+    axis off
     grid off
 %     axis square
 end
