@@ -89,7 +89,9 @@ for M_Num=1:4
     %     surf(RP_Px,RP_Py,RP_Pz,'edgecolor',Edgecolor);
     surf(RP_Px(:,1:23),RP_Py(:,1:23),RP_Pz(:,1:23),'edgecolor',Edgecolor);
     surf(RP_Px(:,23:46),RP_Py(:,23:46),RP_Pz(:,23:46),'edgecolor',Edgecolor);
-    axis([-1 1 -1 1 -1 1]);
+
+    axis equal
+    axis off
 %     surf(RP_Px,RP_Py,RP_Pz,'facecolor',[0.5 0.4 1],'edgecolor',[0,0,0]);
     
     grid off
