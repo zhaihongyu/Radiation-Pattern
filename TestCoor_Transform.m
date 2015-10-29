@@ -1,4 +1,5 @@
 %% Test the coordinates system transform betweem Cartesian and Spherical coordinate
+% The spherical coordinate display the tangential direction
 % Spherical Coordinates
 Theta=pi/2;
 Phi=pi/4;
